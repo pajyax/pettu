@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Define the log pattern -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set root logging level -->
+    <root level="INFO">
+        <appender-ref ref="console" />
+    </root>
+
+    <!-- Set specific package logging level (optional) -->
+    <logger name="com.streamline.petgrooming" level="DEBUG" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+</configuration>
